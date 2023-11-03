@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #141313;
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  margin: 5% auto;
+  text-align: center;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  /* padding: 3rem; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.container:hover {
+  box-shadow: rgba(30, 31, 31, 0.48) 6px 2px 16px 0px,
+    rgba(30, 29, 29, 0.8) -6px -2px 16px 0px;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 33%;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #070707;
+  color: #fff;
+}
+
+h1 span {
+  color: #173da7;
+}
+
+.card {
+  flex-wrap: wrap;
+
+  position: relative;
+  width: 20%;
+  height: 242px;
+  /* margin: 8px; */
+  padding: 12px;
+  border-radius: 18px;
+  /* border: 0.1px solid #ccc; */
+  text-align: center;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: radial-gradient(var(--clr), transparent, transparent);
+  z-index: -1;
+  width: 700px;
+  height: 700px;
+  opacity: 0;
+  transition: 0.5s, top 0s, left 0s;
+}
+
+.card:hover::before {
+  opacity: 0.75;
+}
+
+.card:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  /* border-radius: 18px; */
+}
+
+.card i {
+  font-size: 5.3rem;
+  color: #173da7;
+  margin-bottom: 1.33rem;
+  margin-top: 1rem;
+}
+
+.card p {
+  color: #273e7d;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 1.1rem;
+}

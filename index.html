@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ----------Google Fonts------------ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ----------icons---------------- -->
+
+    <script
+      src="https://kit.fontawesome.com/367ac631f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive container</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Making <span>AI</span> helpful for everyone</h1>
+
+      <div class="boxes">
+        <div class="card" style="--clr: rgba(220, 216, 215, 0.941)">
+          <i class="fa-solid fa-head-side-virus"></i>
+
+          <p>Improve knowledge and learning</p>
+        </div>
+
+        <div class="card" style="--clr: #29cd3f">
+          <i class="fa-solid fa-palette"></i>
+
+          <p>Boost creativity and productivity</p>
+        </div>
+
+        <div class="card" style="--clr: #9baf19">
+          <i class="fa-solid fa-people-group"></i>
+
+          <p>Enable others to lead and innovate</p>
+        </div>
+
+        <div class="card" style="--clr: #d72eb8">
+          <i class="fa-solid fa-gears"></i>
+
+          <p>Build and deploy responsibly</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------JAVASCRIPT------------ -->
+
+    <script>
+      let cards = document.querySelectorAll(".card");
+      cards.forEach((card) => {
+        card.onmousemove = function (e) {
+          let x = e.pageX - card.offsetLeft;
+          let y = e.pageY - card.offsetTop;
+
+          card.style.setProperty("--x", x + "px");
+          card.style.setProperty("--y", y + "px");
+        };
+      });
+    </script>
+  </body>
+</html>
